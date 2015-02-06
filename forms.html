@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Artwork Techniques</title>
+
+<link href="css/style1.css" rel="stylesheet" type="text/css" />
+    
+<script type="text/javascript" src="modernizr-latest.js"></script>
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+    
+<script type="text/javascript">
+    
+    $(document).ready( function(){
+        //alert("hello universe");
+        if(!Modernizr.input.autofucus)
+        {
+            $("input[autofocus]").focus(); //helps older browsers with the autofocus
+        }
+        
+    });
+    
+</script>
+    
+</head> 
+<body class="page" id="top"> 
+	<header>
+	<h1>HTML 5 Forms</h1> 
+	</header>
+	<nav id="navigation" role="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="javascript-concepts.html">Javascript Concepts</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="#">FAQ</a></li>
+			<li><a href="forms.html">html5 Forms</a></li>  
+		</ul>
+		<h2>main navigation</h2> 
+	</nav>
+
+	<div id="primaryContent">
+		<article>	
+			<h2>setting up html5 forms</h2>
+            
+			<h4>using the autofocus attribute</h4>
+			<p>add the attribute "autofocus" to the field we want to have the user fill outfirst</p>
+			<form method="get" action="#">
+				<p><label for="text1">Field 1: </label><input name="Text1" type="text" autofocus /> </p>
+				<p><label for="text2">Field 2: </label><input name="Text2" type="text" /> </p>
+				<p><label for="text3">Field 3: </label><input name="Text3" type="text" /> </p>
+				<input type="submit" value="Hit Me!" />
+			</form>  
+            
+			<h4>using the autoComplete attribute</h4>
+			<form method="get" action="#">
+				<p><label for="text1">Field 1: </label><input name="Text1" type="text" autocomplete="on" /> </p>
+				<p><label for="text2">Field 2: </label><input name="Text2" type="text" /> </p>
+				<p><label for="text3">SS #: </label><input name="Text3" type="text" autocomplete="off" /> </p>
+				<input type="submit" value="Hit Me!" />
+			</form>      
+            
+			<h4>using the placeholder attribute</h4>
+			<form method="get" action="#">
+				<p><label for="text1">First: </label><input name="Text1" type="text"/> </p>
+				<p><label for="text2">Last: </label><input name="Text2" type="text" /> </p>
+				<p><label for="text3">Mail #: </label><input name="Text3" type="text" placeholder="test@test.com"/> </p>
+				<input type="submit" value="Hit Me!" />
+			</form>  
+
+            <h4>using the required attribute</h4>
+			<form method="get" action="#">
+				<p>Please sign up for services</p>
+				<p><label for="text1">First Name:</label><input name="Text2" type="text" required /> </p>
+				<p><label for="text2">Age: </label><input name="Text3" type="text"/> </p>
+                <p><label for="text2">email: </label><input name="Text3" type="text"/> </p>
+				<input type="submit" value="Hit Me!" />
+			</form> 
+
+            <h4>using the pattern attribute</h4>
+			<form method="get" action="#">
+				<p>Please add your zip code.</p>
+				<p><label for="text2">Zip Code:</label><input name="Text2" type="text" placeholder="95472" pattern="^[0-9]{5}$"/> </p>
+				<p><label for="text3">Mail #: </label><input name="Text3" type="text"/> </p>
+				<input type="submit" value="Hit Me!" />
+			</form>  
+            
+			<h4>using the search attribute</h4>
+			<form method="get" action="#">
+				<p>Can't find what you're looking for?.</p>
+				<p><label for="text2">Search:</label><input name="search1" type="search"/> </p>
+
+				<input type="submit" value="Hit Me!" />
+			</form>
+            
+			<h4>using the email attribute</h4>
+			<form method="get" action="#">
+				<p>What is your email</p>
+				<p><label for="text2">Email:</label><input name="email1" type="email"/> </p>
+
+				<input type="submit" value="Hit Me!" />
+			</form> 
+            
+			<h4>using the url attribute</h4>
+			<form method="get" action="#">
+				<p>What is web site address?</p>
+				<p><label for="text2">URL:</label><input name="url1" type="url"/> </p>
+
+				<input type="submit" value="Hit Me!" />
+			</form> 
+            
+			<h4>using the phone attribute</h4>
+			<form method="get" action="#">
+				<p>What your phone number?</p>
+				<p><label for="text2">Phone:</label><input name="phone1" type="tel"/> </p>
+
+				<input type="submit" value="Hit Me!" />
+			</form> 
+            
+			<h4>using the numbers attribute</h4>
+			<form method="get" action="#">
+				<p>Using number types for different attributes</p>
+				<p><label for="num1">Number:</label><input name="num1" type="number" value="5"/> </p>
+                <p><label for="num2">Number Range:</label><input name="num2" type="number" value="7" min="2" max="11"/> </p>
+                <p><label for="num3">Your number step:</label><input name="num3" type="number" value="100" min="0" max="1000" step="10"/> </p>
+                <p><label for="num4">Your number float:</label><input name="num4" type="number" value="0.1" min="0.1" max="2.0" step="0.1"/> </p>
+
+            <h4>using the date and time attribute</h4>
+			<form method="get" action="#">
+				<p><label for="date1">Pick Time:</label><input name="time1" type="time" value="01:30" step="60"/> </p>
+                <p><label for="date2">Date:</label><input name="date2" type="date" value="2014-01-12T06:05:00Z"/> </p>
+                <p><label for="date3">Date Time:</label><input name="date3" type="datetime" value="2014-01-12T12:30Z"/> </p>
+                <p><label for="date3">Date Time-Local:</label><input name="date3" type="datetime-local" value="2015-01-03T01:30"/> </p>
+                <p><label for="date4">Week:</label><input name="date4" type="week" value="2016-W07"/> </p>
+                <p><label for="date5"Month:</label><input name="date5" type="month" value="2016-12"/> </p>
+                <p><label for="date6">Month(min/max):</label><input name="date6" type="month" value="2016-W07" min="2014-12" max="2016-12"/> </p>
+				<input type="submit" value="Hit Me!" />
+			</form>             
+		</article>
+		<aside>
+			<h2>Artist Links</h2> 
+			<p>Artist's work that has inspired me become a better illustrator / painter.<br>
+			I find the 16th and 17th centery facinating due to painting the wrong kind of subject could land you in the clutches of the early church's "Holy Inquisition", and be subject to the<a href="http://listverse.com/2013/09/24/10-horrifying-tortures-of-early-christians/"> tools</a> to help change your mind </p>
+			<ul>
+				<li><a href="http://www.metmuseum.org/toah/hd/crvg/hd_crvg.htm" target="_blank">Caravaggio (Michelangelo Merisi) (1571–1610)</a></li>
+				<li><a href="http://www.arthistoryarchive.com/arthistory/baroque/Artemisia-Gentileschi.html" target="_blank">Artemisia Gentileschi</a></li>
+				<li><a href="http://en.wikipedia.org/wiki/Frida_Kahlo" target="_blank">Frida Kahlo</a></li>
+				<li><a href="http://www.markryden.com/" target="_blank">Mark Ryden</a></li>
+				<li><a href="http://www.metmuseum.org/toah/hd/verm/hd_verm.htm" target="_blank">Johannes Vermeer</a></li>
+				<li><a href="http://en.wikipedia.org/wiki/Jean-Honor%C3%A9_Fragonard" target="_blank">Jean-Honor Fragonard</a></li>
+			</ul>
+		</aside>
+
+	</div> <!-- closing primaryContent   -->
+	
+	<footer>
+		<p>
+		&copy; Copyright  by jason zeringue
+		</p>
+	</footer>
+</body>
+</html>
